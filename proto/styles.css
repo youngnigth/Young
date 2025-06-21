@@ -13,18 +13,35 @@
   --transition:  0.3s ease;
 }
 
-/* 2) Header background (with color overrides only) */
+/* 2) Force body into dark mode */
+body {
+  background-color: var(--bg);
+  color:            var(--text);
+}
+
+/* 3) Header background (with your image + dark tint) */
 .header-bg {
   /* fallback & tint */
-  background-color: var(--bg);
+  background-color:    var(--bg);
   background-blend-mode: multiply;
 
-  /* ensure text uses your theme’s color */
-  color: var(--text);
+  /* ensure header text uses your theme */
+  color:               var(--text);
 
   /* original image settings */
-  background-image: url('cobra-min.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image:    url('cobra-min.jpg');
+  background-repeat:   no-repeat;
+  background-size:     cover;
   background-position: center;
+}
+
+/* 4) Main content wrapper in dark mode */
+main {
+  background-color: var(--bg-glow);
+}
+
+/* 5) Optional: make any “white” card containers use your dark card-bg */
+main .bg-white {
+  background-color: var(--card-bg) !important;
+  color:            var(--text)    !important;
 }
