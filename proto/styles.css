@@ -1,5 +1,28 @@
-/* /styles.css */
+/* styles.css */
+
+/* 1) Brand color palette */
+:root {
+  --bg:          #0a0a0f;
+  --bg-glow:     #13131a;
+  --text:        #f0f0f5;
+  --primary:     #8e5eff;
+  --accent:      #00f7c4;
+  --card-bg:     #181824;
+  --shadow:      0 4px 15px rgba(142, 94, 255, 0.3);
+  --radius:      14px;
+  --transition:  0.3s ease;
+}
+
+/* 2) Header background (with color overrides only) */
 .header-bg {
+  /* fallback & tint */
+  background-color: var(--bg);
+  background-blend-mode: multiply;
+
+  /* ensure text uses your theme’s color */
+  color: var(--text);
+
+  /* original image settings */
   background-image: url('cobra-min.jpg');
   background-repeat: no-repeat;
   background-size: cover;
