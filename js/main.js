@@ -1,7 +1,7 @@
 
 // Blog Loader
 const blogData = [
-  { title: "The-Block-Chain", url: "/posts/The-Block-Chain.html" },
+  { title: "The-Block-Chain", url: "/Young/posts/The-Block-Chain.html" },
   { title: "How We Launched Our First Product", url: "blog.html#launch-product" },
   { title: "Top 5 Tools We Use to Stay Productive", url: "blog.html#top-tools" }
 ];
