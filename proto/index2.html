@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Manager - Night Mode</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style2.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+      <h1>Budget Manager</h1>
+      <nav><!-- Night Mode Enabled --></nav>
+    </header>
+
+    <section class="card">
+      <form id="entry-form" class="form-group">
+        <input type="text" id="description" placeholder="Description" required>
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+          <option value="investment">Investment</option>
+          <option value="debt">Debt</option>
+          <option value="asset">Asset</option>
+        </select>
+        <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <button class="download-btn" id="download-pdf">Download PDF</button>
+
+    <section class="chart-container card">
+      <canvas id="distributionChart"></canvas>
+    </section>
+
+    <section class="summary">
+      <div class="card"><h3>Total Income</h3><p id="total-income">$0.00</p></div>
+      <div class="card"><h3>Total Expense</h3><p id="total-expense">$0.00</p></div>
+      <div class="card"><h3>Total Investments</h3><p id="total-investment">$0.00</p></div>
+      <div class="card"><h3>Total Debt</h3><p id="total-debt">$0.00</p></div>
+      <div class="card"><h3>Total Assets</h3><p id="total-asset">$0.00</p></div>
+      <div class="card"><h3>Total Net Worth</h3><p id="total-net-worth">$0.00</p></div>
+      <div class="card"><h3>Balance</h3><p id="balance">$0.00</p></div>
+    </section>
+
+    <section class="card">
+      <h2>Entries</h2>
+      <div class="entries" id="entries"></div>
+    </section>
+  </div>
+
+  <!-- Main script -->
+  <script src="script2.js"></script>
+</body>
+</html>
